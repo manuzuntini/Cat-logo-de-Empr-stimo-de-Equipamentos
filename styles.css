@@ -1,0 +1,3 @@
+/* Estilo extra opcional (mantemos minimalista pois Tailwind cuida do layout) */
+:root { color-scheme: light dark; }
+html { scroll-behavior: smooth; }
