@@ -1,32 +1,44 @@
-# Catálogo de Empréstimo de Equipamentos (Vue 3 + Tailwind, via CDN)
+📖 Descrição do Projeto
 
-Aplicação com CRUD completo, persistência em `localStorage` e propriedades `computed`.
+O Catálogo de Empréstimo de Equipamentos de Laboratório é uma aplicação Single Page Application (SPA) desenvolvida com Vue.js 3 via CDN e TailwindCSS.
+O objetivo é permitir o cadastro, listagem, edição e remoção de equipamentos (CRUD), além de controlar o status de empréstimo de cada item (disponível ou emprestado).
 
-## Como rodar
-Abra `index.html` no navegador (duplo clique). Não é necessário instalar nada.
+A aplicação mantém os dados salvos no localStorage, garantindo persistência mesmo após recarregar a página.
 
-## Dependências
-- **Nenhuma instalação obrigatória** (Vue 3 e Tailwind via CDN).
+✨ Funcionalidades
 
-### (Opcional) Ambiente com Node/NPM
-Se preferir rodar um dev server e empacotar dependências:
-```bash
-npm create vite@latest catalogo-lab -- --template vanilla
-cd catalogo-lab
-npm i vue@3
-npm i -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-# Configure o Tailwind conforme a docs e mova os arquivos para /src
-npm run dev
-```
+Cadastro (Create): formulário com validação simples para todos os campos obrigatórios.
 
-## Estrutura
-- `index.html`: marcação e inclusão dos CDNs + referência ao `main.js`.
-- `main.js`: lógica Vue (CRUD, filtros, computed e persistência).
+Listagem (Read): exibição em tabela/lista usando v-for, com mensagem amigável quando vazia.
 
-## Requisitos atendidos
-- v-model, v-on, v-bind (:class e :disabled), v-if/v-else, v-for com :key.
-- CRUD completo com confirmação de remoção.
-- Persistência no localStorage (carrega e salva automaticamente).
-- Computed: contadores e lista filtrada.
-- Acessibilidade: labels, aria-invalid, foco ao editar.
+Edição (Update): possibilidade de alterar dados de um equipamento já cadastrado.
+
+Remoção (Delete): exclusão com confirmação.
+
+Status visual: destaque com cores diferentes para “disponível” e “emprestado”.
+
+Persistência: todos os dados são salvos e restaurados via localStorage.
+
+Propriedades Computadas:
+
+Contadores automáticos (total, disponíveis, emprestados).
+
+Filtro dinâmico por categoria e/ou status.
+
+🛠️ Tecnologias Utilizadas
+
+Vue.js 3
+ (via CDN)
+
+TailwindCSS
+ (via CDN)
+
+HTML5 + CSS3 + JavaScript (sem backend)
+
+🚀 Como Executar
+
+Baixe/clonar este repositório.
+
+Abra o arquivo index.html diretamente no navegador.
+
+Não é necessário instalar dependências.
